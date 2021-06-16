@@ -8645,10 +8645,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #5E50F9;
+  --bs-blue: #5e50f9;
   --bs-indigo: #6610f2;
   --bs-purple: #6a008a;
-  --bs-pink: #E91E63;
+  --bs-pink: #e91e63;
   --bs-red: #f96868;
   --bs-orange: #f2a654;
   --bs-yellow: #f6e84e;
@@ -19944,7 +19944,7 @@ code {
 
 /* Footer */
 .footer {
-  background: #ededed;
+  background: white;
   color: color(dark);
   padding: 30px 2.45rem;
   transition: all 0.25s ease;
@@ -20288,7 +20288,7 @@ code {
   padding-top: 24px;
   padding-bottom: 24px;
   z-index: 2;
-  background: #ededed;
+  background: white;
 }
 
 .doc-content {
@@ -28855,7 +28855,7 @@ div.tagsinput span.tag a {
 }
 
 .main-panel {
-  background: #ededed;
+  background: white;
   width: 100%;
 }
 

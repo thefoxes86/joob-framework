@@ -6,12 +6,21 @@
   font-family: $type1;
   font-weight: 500;
   padding: 0;
+  background-color: $sidebar-light-bg;
   width: $sidebar-width-lg;
   z-index: 11;
-  transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
+  -webkit-transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
+  -moz-transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
+  -ms-transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
 
   .nav {
     overflow: hidden;
@@ -31,7 +40,8 @@
         @include display-flex;
         @include align-items(center);
         white-space: nowrap;
-        padding: $sidebar-menu-padding-top $sidebar-menu-padding-right $sidebar-menu-padding-bottom $sidebar-menu-padding-left;
+        padding: $sidebar-menu-padding-top $sidebar-menu-padding-right
+          $sidebar-menu-padding-bottom $sidebar-menu-padding-left;
         color: $sidebar-light-menu-color;
         @include transition-duration(0.45s);
         transition-property: color;
@@ -72,7 +82,7 @@
               display: block;
               font-size: 0.687rem;
               line-height: 10px;
-              @include transition(all .2s ease-in);
+              @include transition(all 0.2s ease-in);
             }
           }
         }
@@ -105,20 +115,20 @@
 
       &.active {
         > .nav-link {
-            background: $sidebar-light-menu-active-bg;
-            position: relative;
-            i,
-            .menu-title,
-            .menu-arrow {
-              color: $sidebar-light-menu-active-color;
-            }
-            i {
-              &.menu-arrow {
-                &::before {
-                  content: "\e64b";
-                }
+          background: $sidebar-light-menu-active-bg;
+          position: relative;
+          i,
+          .menu-title,
+          .menu-arrow {
+            color: $sidebar-light-menu-active-color;
+          }
+          i {
+            &.menu-arrow {
+              &::before {
+                content: "\e64b";
               }
             }
+          }
         }
       }
     }
@@ -128,12 +138,13 @@
       margin-left: 0.375rem;
       margin-right: 0.375rem;
       > .nav-item {
-        margin-top: .2rem;
+        margin-top: 0.2rem;
         &:hover {
-          > .nav-link, &[aria-expanded="true"] {
+          > .nav-link,
+          &[aria-expanded="true"] {
             background: $sidebar-light-menu-hover-bg;
             color: $sidebar-light-menu-hover-color;
-            border-radius: 0.437rem;                         
+            border-radius: 0.437rem;
           }
         }
         > .nav-link {
@@ -151,7 +162,7 @@
     }
     &.sub-menu {
       margin-bottom: 0;
-      margin-top:0;
+      margin-top: 0;
       list-style: none;
       padding: $sidebar-submenu-padding;
       background: $sidebar-light-menu-hover-bg;
@@ -160,7 +171,7 @@
       .nav-item {
         padding: 0;
         &::before {
-          content: '';
+          content: "";
           width: 5px;
           height: 5px;
           position: absolute;
@@ -219,7 +230,7 @@
             background: $sidebar-dark-menu-active-bg;
             .menu-title,
             i {
-              color: $sidebar-dark-menu-active-color; 
+              color: $sidebar-dark-menu-active-color;
             }
           }
         }
@@ -229,7 +240,7 @@
           &:hover {
             > .nav-link {
               background: $sidebar-dark-menu-hover-bg;
-              color: $sidebar-dark-menu-hover-color;                                    
+              color: $sidebar-dark-menu-hover-color;
             }
           }
           .nav-link {

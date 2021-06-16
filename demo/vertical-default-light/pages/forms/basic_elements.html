@@ -24,145 +24,340 @@
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo me-5" href="../../index.html"><img src="../../../../images/logo.svg" class="me-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../../../images/logo-mini.svg" alt="logo"/></a>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-          <span class="ti-layout-grid2"></span>
-        </button>
-        <ul class="navbar-nav mr-lg-2">
-          <li class="nav-item nav-search d-none d-lg-block">
-            <div class="input-group">
-              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-                <span class="input-group-text" id="search">
-                  <i class="ti-search"></i>
-                </span>
+  <div
+    class="
+      text-center
+      navbar-brand-wrapper
+      d-flex
+      align-items-center
+      justify-content-center
+    "
+  >
+    <button
+      class="navbar-toggler navbar-toggler align-self-center"
+      type="button"
+      data-toggle="minimize"
+    >
+      <span class="ti-more"></span>
+    </button>
+  </div>
+  <div
+    class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+  >
+    <ul class="navbar-nav mr-lg-2">
+      <li class="nav-item d-none d-lg-block">
+        <a class="navbar-brand brand-logo" href="index.html"
+          ><img src="../../images/logo_icon.png" class="" alt="logo"
+        /></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav navbar-nav-right">
+      <li class="nav-item dropdown">
+        <a
+          class="
+            nav-link
+            count-indicator
+            dropdown-toggle
+            d-flex
+            justify-content-center
+            align-items-center
+          "
+          id="messageDropdown"
+          href="#"
+          data-bs-toggle="dropdown"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="29.927"
+            height="18.979"
+            viewBox="0 0 29.927 18.979"
+          >
+            <g
+              id="Raggruppa_1224"
+              data-name="Raggruppa 1224"
+              transform="translate(-203.034 -19.003)"
+            >
+              <g
+                id="Raggruppa_1223"
+                data-name="Raggruppa 1223"
+                transform="translate(203.034 19.003)"
+              >
+                <path
+                  id="Tracciato_1922"
+                  data-name="Tracciato 1922"
+                  d="M208.887,15.649a2.179,2.179,0,0,0-1.163.342L220.68,26.952a1.494,1.494,0,0,0,1.985,0L235.6,15.991a2.179,2.179,0,0,0-1.164-.342Zm-2.065,1.471a2.208,2.208,0,0,0-.125.719v14.6a2.169,2.169,0,0,0,.353,1.186l9.272-8.451Zm29.678,0-9.478,8.041,9.25,8.463a2.17,2.17,0,0,0,.353-1.186v-14.6A2.208,2.208,0,0,0,236.5,17.12Zm-10.6,9-2.3,1.95a2.991,2.991,0,0,1-3.867,0L217.44,26.13l-9.2,8.4a2.2,2.2,0,0,0,.651.1h25.547a2.2,2.2,0,0,0,.651-.1Z"
+                  transform="translate(-206.697 -15.649)"
+                  fill="#707070"
+                />
+              </g>
+            </g>
+          </svg>
+        </a>
+        <div
+          class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+          aria-labelledby="messageDropdown"
+        >
+          <p class="mb-0 font-weight-normal float-left dropdown-header">
+            Messages
+          </p>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <img
+                src="https://via.placeholder.com/36x36"
+                alt="image"
+                class="profile-pic"
+              />
+            </div>
+            <div class="preview-item-content flex-grow">
+              <h6 class="preview-subject ellipsis font-weight-normal">
+                David Grey
+              </h6>
+              <p class="font-weight-light small-text text-muted mb-0">
+                The meeting is cancelled
+              </p>
+            </div>
+          </a>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <img
+                src="https://via.placeholder.com/36x36"
+                alt="image"
+                class="profile-pic"
+              />
+            </div>
+            <div class="preview-item-content flex-grow">
+              <h6 class="preview-subject ellipsis font-weight-normal">
+                Tim Cook
+              </h6>
+              <p class="font-weight-light small-text text-muted mb-0">
+                New product launch
+              </p>
+            </div>
+          </a>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <img
+                src="https://via.placeholder.com/36x36"
+                alt="image"
+                class="profile-pic"
+              />
+            </div>
+            <div class="preview-item-content flex-grow">
+              <h6 class="preview-subject ellipsis font-weight-normal">
+                Johnson
+              </h6>
+              <p class="font-weight-light small-text text-muted mb-0">
+                Upcoming board meeting
+              </p>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link count-indicator dropdown-toggle"
+          id="notificationDropdown"
+          href="#"
+          data-bs-toggle="dropdown"
+        >
+          <svg
+            id="Raggruppa_97"
+            data-name="Raggruppa 97"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30.829"
+            height="31.115"
+            viewBox="0 0 30.829 31.115"
+          >
+            <g id="Raggruppa_96" data-name="Raggruppa 96">
+              <path
+                id="Tracciato_106"
+                data-name="Tracciato 106"
+                d="M348.647,114.534a4.958,4.958,0,0,1-4.89-4.205l-.141-.97h10.061l-.14.97A4.955,4.955,0,0,1,348.647,114.534Zm15.415-6.587H333.233v-2.158a2.222,2.222,0,0,1,.869-1.741l1.216-.839a10.158,10.158,0,0,0,4.342-7.438l.409-4.544a8.616,8.616,0,0,1,17.156,0l.409,4.544a10.015,10.015,0,0,0,4.337,7.436l1.19.82a2.179,2.179,0,0,1,.9,1.763Z"
+                transform="translate(-333.233 -83.419)"
+                fill="#707070"
+              />
+            </g>
+          </svg>
+
+          <span class="count"></span>
+        </a>
+        <div
+          class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+          aria-labelledby="notificationDropdown"
+        >
+          <p class="mb-0 font-weight-normal float-left dropdown-header">
+            Notifications
+          </p>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <div class="preview-icon bg-success">
+                <i class="ti-info-alt mx-0"></i>
               </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
             </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item dropdown me-1">
-            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-bs-toggle="dropdown">
-              <i class="ti-email mx-0"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
-              <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                    <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-normal">David Grey
-                  </h6>
-                  <p class="font-weight-light small-text text-muted mb-0">
-                    The meeting is cancelled
-                  </p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                    <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
-                  </h6>
-                  <p class="font-weight-light small-text text-muted mb-0">
-                    New product launch
-                  </p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                    <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
-                  </h6>
-                  <p class="font-weight-light small-text text-muted mb-0">
-                    Upcoming board meeting
-                  </p>
-                </div>
-              </a>
+            <div class="preview-item-content">
+              <h6 class="preview-subject font-weight-normal">
+                Application Error
+              </h6>
+              <p class="font-weight-light small-text mb-0 text-muted">
+                Just now
+              </p>
             </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-              <i class="ti-bell mx-0"></i>
-              <span class="count"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-success">
-                    <i class="ti-info-alt mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
-                  <p class="font-weight-light small-text mb-0 text-muted">
-                    Just now
-                  </p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-warning">
-                    <i class="ti-settings mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Settings</h6>
-                  <p class="font-weight-light small-text mb-0 text-muted">
-                    Private message
-                  </p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-info">
-                    <i class="ti-user mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
-                  <p class="font-weight-light small-text mb-0 text-muted">
-                    2 days ago
-                  </p>
-                </div>
-              </a>
+          </a>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <div class="preview-icon bg-warning">
+                <i class="ti-settings mx-0"></i>
+              </div>
             </div>
-          </li>
-          <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-              <img src="https://via.placeholder.com/40x40" alt="profile"/>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="ti-settings text-primary"></i>
-                Settings
-              </a>
-              <a class="dropdown-item">
-                <i class="ti-power-off text-primary"></i>
-                Logout
-              </a>
+            <div class="preview-item-content">
+              <h6 class="preview-subject font-weight-normal">Settings</h6>
+              <p class="font-weight-light small-text mb-0 text-muted">
+                Private message
+              </p>
             </div>
-          </li>
-          <li class="nav-item nav-settings d-none d-lg-flex">
-            <a class="nav-link" href="#">
-              <i class="ti-more"></i>
-            </a>
-          </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-          <span class="ti-layout-grid2"></span>
-        </button>
-      </div>
-    </nav>
+          </a>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <div class="preview-icon bg-info">
+                <i class="ti-user mx-0"></i>
+              </div>
+            </div>
+            <div class="preview-item-content">
+              <h6 class="preview-subject font-weight-normal">
+                New user registration
+              </h6>
+              <p class="font-weight-light small-text mb-0 text-muted">
+                2 days ago
+              </p>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link count-indicator dropdown-toggle"
+          id="notificationDropdown"
+          href="#"
+          data-bs-toggle="dropdown"
+        >
+          <svg
+            id="Raggruppa_94"
+            data-name="Raggruppa 94"
+            xmlns="http://www.w3.org/2000/svg"
+            width="21.401"
+            height="29.46"
+            viewBox="0 0 21.401 29.46"
+          >
+            <path
+              id="Tracciato_104"
+              data-name="Tracciato 104"
+              d="M290.052-36.521a1.388,1.388,0,0,0-1.387,1.386,1.388,1.388,0,0,0,1.387,1.385,1.387,1.387,0,0,0,1.385-1.385A1.387,1.387,0,0,0,290.052-36.521Z"
+              transform="translate(-279.351 52.887)"
+              fill="#707070"
+            />
+            <path
+              id="Tracciato_105"
+              data-name="Tracciato 105"
+              d="M301.987-39.541H286.248V-42.69a5.674,5.674,0,0,1,5.667-5.666,5.639,5.639,0,0,1,5.495,4.329c.065.278.288.785.717.73.529-.069.61-.364.593-.6a2.518,2.518,0,0,0-.05-.287,6.93,6.93,0,0,0-6.755-5.433,6.931,6.931,0,0,0-6.924,6.924v3.149h-3.15a.629.629,0,0,0-.628.629v8.058a10.713,10.713,0,0,0,10.7,10.7,10.712,10.712,0,0,0,10.7-10.7v-8.058A.629.629,0,0,0,301.987-39.541ZM294.12-30.4a2.623,2.623,0,0,1-1.578,1.109v3.475a.63.63,0,0,1-.628.63.63.63,0,0,1-.629-.63v-3.475a2.65,2.65,0,0,1-2.016-2.57,2.646,2.646,0,0,1,2.643-2.641h0s2.341.89,2.589,2.118A2.621,2.621,0,0,1,294.12-30.4Z"
+              transform="translate(-281.214 49.614)"
+              fill="#707070"
+            />
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item nav-profile dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          data-bs-toggle="dropdown"
+          id="profileDropdown"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="49.385"
+            height="49.385"
+            viewBox="0 0 49.385 49.385"
+          >
+            <defs>
+              <clipPath id="clip-path">
+                <ellipse
+                  id="Ellisse_1"
+                  data-name="Ellisse 1"
+                  cx="24.692"
+                  cy="24.692"
+                  rx="24.692"
+                  ry="24.692"
+                  fill="#9d9d9c"
+                />
+              </clipPath>
+            </defs>
+            <g
+              id="Raggruppa_1222"
+              data-name="Raggruppa 1222"
+              transform="translate(-1826.012 -25)"
+            >
+              <ellipse
+                id="Ellisse_73"
+                data-name="Ellisse 73"
+                cx="24.692"
+                cy="24.692"
+                rx="24.692"
+                ry="24.692"
+                transform="translate(1826.012 25)"
+                fill="#9d9d9c"
+              />
+              <g
+                id="Gruppo_di_maschere_4"
+                data-name="Gruppo di maschere 4"
+                transform="translate(1826.012 25)"
+                clip-path="url(#clip-path)"
+              >
+                <g
+                  id="Raggruppa_1221"
+                  data-name="Raggruppa 1221"
+                  transform="translate(8.008 7.768)"
+                >
+                  <path
+                    id="Unione_1"
+                    data-name="Unione 1"
+                    d="M0,41.617V40.185a16.705,16.705,0,0,1,33.411,0v1.431ZM6.681,10.023A10.023,10.023,0,1,1,16.7,20.047,10.035,10.035,0,0,1,6.681,10.023Z"
+                    transform="translate(0 0)"
+                    fill="#fff"
+                    stroke="rgba(0,0,0,0)"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <div
+          class="dropdown-menu dropdown-menu-right navbar-dropdown"
+          aria-labelledby="profileDropdown"
+        >
+          <a class="dropdown-item">
+            <i class="ti-settings text-primary"></i>
+            Settings
+          </a>
+          <a class="dropdown-item">
+            <i class="ti-power-off text-primary"></i>
+            Logout
+          </a>
+        </div>
+      </li>
+    </ul>
+    <button
+      class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+      type="button"
+      data-toggle="offcanvas"
+    >
+      <span class="ti-layout-grid2"></span>
+    </button>
+  </div>
+</nav>
+
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:../../partials/_settings-panel.html -->
@@ -337,257 +532,555 @@
       <!-- partial -->
       <!-- partial:../../partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+        >
+          <g id="Raggruppa_13" data-name="Raggruppa 13">
+            <circle
+              id="Ellisse_10"
+              data-name="Ellisse 10"
+              cx="25"
+              cy="25"
+              r="25"
+              transform="translate(0 0)"
+              fill="#fff"
+            />
+          </g>
+          <path
+            id="Tracciato_1207"
+            data-name="Tracciato 1207"
+            d="M27.858,8.024,11.75,24.806H16.8L18.893,39.65h6.079l-1.04-7.372h7.851l-1.04,7.372h6.079l2.094-14.843h5.049Z"
+            transform="translate(-2.851 0.012)"
+            fill="#707070"
+          />
+        </svg>
+
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pages/widgets/widgets.html">
+        <i class="ti-settings menu-icon"></i>
+        <span class="menu-title">Widgets</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#ui-basic"
+        aria-expanded="false"
+        aria-controls="ui-basic"
+      >
+        <i class="ti-palette menu-icon"></i>
+        <span class="menu-title">UI Elements</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="../../index.html">
-              <i class="ti-home menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+            <a class="nav-link" href="pages/ui-features/accordions.html"
+              >Accordions</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/buttons.html"
+              >Buttons</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/badges.html">Badges</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/breadcrumbs.html"
+              >Breadcrumbs</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/dropdowns.html"
+              >Dropdowns</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/modals.html">Modals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/progress.html"
+              >Progress bar</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/pagination.html"
+              >Pagination</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/tabs.html">Tabs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/typography.html"
+              >Typography</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/tooltips.html"
+              >Tooltips</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#ui-advanced"
+        aria-expanded="false"
+        aria-controls="ui-advanced"
+      >
+        <i class="ti-view-list menu-icon"></i>
+        <span class="menu-title">Advanced UI</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="ui-advanced">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/dragula.html"
+              >Dragula</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/clipboard.html"
+              >Clipboard</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/context-menu.html"
+              >Context menu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/slider.html">Sliders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/carousel.html"
+              >Carousel</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/colcade.html"
+              >Colcade</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/ui-features/loaders.html"
+              >Loaders</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#form-elements"
+        aria-expanded="false"
+        aria-controls="form-elements"
+      >
+        <i class="ti-clipboard menu-icon"></i>
+        <span class="menu-title">Form elements</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="form-elements">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/forms/basic_elements.html"
+              >Basic Elements</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/forms/advanced_elements.html"
+              >Advanced Elements</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/forms/validation.html"
+              >Validation</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/forms/wizard.html">Wizard</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#editors"
+        aria-expanded="false"
+        aria-controls="editors"
+      >
+        <i class="ti-eraser menu-icon"></i>
+        <span class="menu-title">Editors</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="editors">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/forms/text_editor.html"
+              >Text editors</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/forms/code_editor.html"
+              >Code editors</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#charts"
+        aria-expanded="false"
+        aria-controls="charts"
+      >
+        <i class="ti-bar-chart-alt menu-icon"></i>
+        <span class="menu-title">Charts</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="charts">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/charts/morris.html">Morris</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/charts/flot-chart.html">Flot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/charts/google-charts.html"
+              >Google charts</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/charts/sparkline.html"
+              >Sparkline js</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/charts/c3.html">C3 charts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/charts/chartist.html">Chartists</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/charts/justGage.html">JustGage</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#tables"
+        aria-expanded="false"
+        aria-controls="tables"
+      >
+        <i class="ti-layout menu-icon"></i>
+        <span class="menu-title">Tables</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="tables">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/tables/basic-table.html"
+              >Basic table</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/tables/data-table.html"
+              >Data table</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/tables/js-grid.html">Js-grid</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/tables/sortable-table.html"
+              >Sortable table</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pages/ui-features/popups.html">
+        <i class="ti-export menu-icon"></i>
+        <span class="menu-title">Popups</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pages/ui-features/notifications.html">
+        <i class="ti-bell menu-icon"></i>
+        <span class="menu-title">Notifications</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#icons"
+        aria-expanded="false"
+        aria-controls="icons"
+      >
+        <i class="ti-face-smile menu-icon"></i>
+        <span class="menu-title">Icons</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="icons">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/icons/flag-icons.html"
+              >Flag icons</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/icons/font-awesome.html"
+              >Font Awesome</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/icons/simple-line-icon.html"
+              >Simple line icons</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/icons/themify.html"
+              >Themify icons</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#maps"
+        aria-expanded="false"
+        aria-controls="maps"
+      >
+        <i class="ti-map menu-icon"></i>
+        <span class="menu-title">Maps</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="maps">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/maps/mapael.html">Mapael</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/maps/vector-map.html">Vector Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/maps/google-maps.html"
+              >Google Map</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#auth"
+        aria-expanded="false"
+        aria-controls="auth"
+      >
+        <i class="ti-layers-alt menu-icon"></i>
+        <span class="menu-title">User Pages</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="auth">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/login.html"> Login </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/login-2.html"> Login 2 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/register.html">
+              Register
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/widgets/widgets.html">
-              <i class="ti-settings menu-icon"></i>
-              <span class="menu-title">Widgets</span>
+            <a class="nav-link" href="pages/samples/register-2.html">
+              Register 2
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="ti-palette menu-icon"></i>
-              <span class="menu-title">UI Elements</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/accordions.html">Accordions</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/badges.html">Badges</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/breadcrumbs.html">Breadcrumbs</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/modals.html">Modals</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/progress.html">Progress bar</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/pagination.html">Pagination</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/tabs.html">Tabs</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/tooltips.html">Tooltips</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-advanced" aria-expanded="false" aria-controls="ui-advanced">
-              <i class="ti-view-list menu-icon"></i>
-              <span class="menu-title">Advanced UI</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-advanced">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/dragula.html">Dragula</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/clipboard.html">Clipboard</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/context-menu.html">Context menu</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/slider.html">Sliders</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/carousel.html">Carousel</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/colcade.html">Colcade</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/loaders.html">Loaders</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-              <i class="ti-clipboard menu-icon"></i>
-              <span class="menu-title">Form elements</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="form-elements">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="../../pages/forms/basic_elements.html">Basic Elements</a></li>                
-                <li class="nav-item"><a class="nav-link" href="../../pages/forms/advanced_elements.html">Advanced Elements</a></li>
-                <li class="nav-item"><a class="nav-link" href="../../pages/forms/validation.html">Validation</a></li>
-                <li class="nav-item"><a class="nav-link" href="../../pages/forms/wizard.html">Wizard</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#editors" aria-expanded="false" aria-controls="editors">
-              <i class="ti-eraser menu-icon"></i>
-              <span class="menu-title">Editors</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="editors">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="../../pages/forms/text_editor.html">Text editors</a></li>
-                <li class="nav-item"><a class="nav-link" href="../../pages/forms/code_editor.html">Code editors</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="ti-bar-chart-alt menu-icon"></i>
-              <span class="menu-title">Charts</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/chartjs.html">ChartJs</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/morris.html">Morris</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/flot-chart.html">Flot</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/google-charts.html">Google charts</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/sparkline.html">Sparkline js</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/c3.html">C3 charts</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/chartist.html">Chartists</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/justGage.html">JustGage</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-              <i class="ti-layout menu-icon"></i>
-              <span class="menu-title">Tables</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="tables">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/tables/basic-table.html">Basic table</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/tables/data-table.html">Data table</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/tables/js-grid.html">Js-grid</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/tables/sortable-table.html">Sortable table</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/ui-features/popups.html">
-              <i class="ti-export menu-icon"></i>
-              <span class="menu-title">Popups</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/ui-features/notifications.html">
-              <i class="ti-bell menu-icon"></i>
-              <span class="menu-title">Notifications</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-              <i class="ti-face-smile menu-icon"></i>
-              <span class="menu-title">Icons</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="icons">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/icons/flag-icons.html">Flag icons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/icons/mdi.html">Mdi icons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/icons/font-awesome.html">Font Awesome</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/icons/simple-line-icon.html">Simple line icons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/icons/themify.html">Themify icons</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#maps" aria-expanded="false" aria-controls="maps">
-              <i class="ti-map menu-icon"></i>
-              <span class="menu-title">Maps</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="maps">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/maps/mapael.html">Mapael</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/maps/vector-map.html">Vector Map</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/maps/google-maps.html">Google Map</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="ti-layers-alt menu-icon"></i>
-              <span class="menu-title">User Pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login-2.html"> Login 2 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Register </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register-2.html"> Register 2 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/lock-screen.html"> Lockscreen </a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
-              <i class="ti-help-alt menu-icon"></i>
-              <span class="menu-title">Error pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="error">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-              <i class="ti-layers menu-icon"></i>
-              <span class="menu-title">General Pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="general-pages">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/blank-page.html"> Blank Page </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/profile.html"> Profile </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/faq.html"> FAQ </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/faq-2.html"> FAQ 2 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/news-grid.html"> News grid </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/timeline.html"> Timeline </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/search-results.html"> Search Results </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/portfolio.html"> Portfolio </a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#e-commerce" aria-expanded="false" aria-controls="e-commerce">
-              <i class="ti-shopping-cart menu-icon"></i>
-              <span class="menu-title">E-commerce</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="e-commerce">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/invoice.html"> Invoice </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/pricing-table.html"> Pricing Table </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/orders.html"> Orders </a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/apps/email.html">
-              <i class="ti-email menu-icon"></i>
-              <span class="menu-title">E-mail</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/apps/calendar.html">
-              <i class="ti-calendar menu-icon"></i>
-              <span class="menu-title">Calendar</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/apps/todo.html">
-              <i class="ti-check-box menu-icon"></i>
-              <span class="menu-title">Todo List</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/apps/gallery.html">
-              <i class="ti-gallery menu-icon"></i>
-              <span class="menu-title">Gallery</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/documentation/documentation.html">
-              <i class="ti-write menu-icon"></i>
-              <span class="menu-title">Documentation</span>
+            <a class="nav-link" href="pages/samples/lock-screen.html">
+              Lockscreen
             </a>
           </li>
         </ul>
-      </nav>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#error"
+        aria-expanded="false"
+        aria-controls="error"
+      >
+        <i class="ti-help-alt menu-icon"></i>
+        <span class="menu-title">Error pages</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="error">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/error-404.html"> 404 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/error-500.html"> 500 </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#general-pages"
+        aria-expanded="false"
+        aria-controls="general-pages"
+      >
+        <i class="ti-layers menu-icon"></i>
+        <span class="menu-title">General Pages</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="general-pages">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/blank-page.html">
+              Blank Page
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/profile.html"> Profile </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/faq.html"> FAQ </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/faq-2.html"> FAQ 2 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/news-grid.html">
+              News grid
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/timeline.html">
+              Timeline
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/search-results.html">
+              Search Results
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/portfolio.html">
+              Portfolio
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-bs-toggle="collapse"
+        href="#e-commerce"
+        aria-expanded="false"
+        aria-controls="e-commerce"
+      >
+        <i class="ti-shopping-cart menu-icon"></i>
+        <span class="menu-title">E-commerce</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="e-commerce">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/invoice.html"> Invoice </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/pricing-table.html">
+              Pricing Table
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/samples/orders.html"> Orders </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pages/apps/email.html">
+        <i class="ti-email menu-icon"></i>
+        <span class="menu-title">E-mail</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pages/apps/calendar.html">
+        <i class="ti-calendar menu-icon"></i>
+        <span class="menu-title">Calendar</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pages/apps/todo.html">
+        <i class="ti-check-box menu-icon"></i>
+        <span class="menu-title">Todo List</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pages/apps/gallery.html">
+        <i class="ti-gallery menu-icon"></i>
+        <span class="menu-title">Gallery</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pages/documentation/documentation.html">
+        <i class="ti-write menu-icon"></i>
+        <span class="menu-title">Documentation</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
       <!-- partial -->
       <div class="main-panel">        
         <div class="content-wrapper">

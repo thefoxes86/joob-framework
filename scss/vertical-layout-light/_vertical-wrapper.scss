@@ -14,7 +14,9 @@
 }
 
 .main-panel {
-  transition: width $action-transition-duration $action-transition-timing-function, margin $action-transition-duration $action-transition-timing-function;
+  transition: width $action-transition-duration
+      $action-transition-timing-function,
+    margin $action-transition-duration $action-transition-timing-function;
   width: calc(100% - #{$sidebar-width-lg});
   min-height: calc(100vh - #{$navbar-height});
   @include display-flex();
@@ -26,11 +28,11 @@
 }
 
 .content-wrapper {
-  background: $content-bg;
+  background: transparent;
   padding: 2.68rem 2.5rem;
   width: 100%;
   @include flex-grow(1);
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     padding: 1.5rem 1.5rem;
   }
 }

@@ -60,9 +60,13 @@ gulp.task("watch-index-html", function () {
       .src("./demo/vertical-default-light/index.html")
       .pipe(
         inject(
-          gulp.src(["./demo/vertical-default-light/partials/_navbar.html"]),
+          gulp.src([
+            "./demo/vertical-default-light/partials/_navbar.html",
+            "./demo/vertical-default-light/partials/_sidebar.html",
+            "./demo/vertical-default-light/partials/_footer.html",
+          ]),
           {
-            starttag: "<!-- inject:navbar:html -->",
+            starttag: "<!-- inject:sidebar:html -->",
             transform: function (filepath, file) {
               return file.contents.toString();
             },

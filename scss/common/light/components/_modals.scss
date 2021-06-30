@@ -1,35 +1,36 @@
 /* Modals */
 
-.modal{
-  .modal-dialog{
+.modal {
+  .modal-dialog {
     margin-top: 100px;
-    .modal-content{
-      .modal-header{
+    .modal-content {
+      .modal-header {
         padding: $modal-header-padding-y $modal-header-padding-x;
-        .close{
+        border-bottom: none;
+        .close {
           border: none;
           background: transparent;
-          span{
+          span {
             font-size: 20px;
             font-weight: 400;
             color: #6a6a6a;
           }
         }
       }
-      .modal-body{
+      .modal-body {
         padding: $modal-body-padding-y $modal-body-padding-x;
       }
-      .modal-footer{
+      .modal-footer {
         padding: $modal-footer-padding-y $modal-footer-padding-x;
-        @media(max-width: 400px) {
-          padding-left: .25rem;
-          padding-right: .25rem;
+        @media (max-width: 400px) {
+          padding-left: 0.25rem;
+          padding-right: 0.25rem;
           flex-direction: column;
-          >:not(:last-child) {
+          > :not(:last-child) {
             margin-right: 0;
-            margin-bottom: .7rem;
+            margin-bottom: 0.7rem;
           }
-          >:not(:first-child) {
+          > :not(:first-child) {
             margin-left: 0;
           }
         }

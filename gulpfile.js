@@ -49,21 +49,21 @@ gulp.task(
 // import html module beween pages
 gulp.task("import", function () {
   return gulp
-    .src("./demo/vertical-default-light/index.html", { allowEmpty: true })
-    .pipe(htmlImport("./demo/vertical-default-light/"))
-    .pipe(gulp.dest("./demo/vertical-default-light/"));
+    .src("./demo/default-light/index.html", { allowEmpty: true })
+    .pipe(htmlImport("./demo/default-light/"))
+    .pipe(gulp.dest("./demo/default-light/"));
 });
 
 gulp.task("watch-index-html", function () {
   gulp.watch("", function (file) {
     return gulp
-      .src("./demo/vertical-default-light/index.html")
+      .src("./demo/default-light/index.html")
       .pipe(
         inject(
           gulp.src([
-            "./demo/vertical-default-light/partials/_navbar.html",
-            "./demo/vertical-default-light/partials/_sidebar.html",
-            "./demo/vertical-default-light/partials/_footer.html",
+            "./demo/default-light/partials/_navbar.html",
+            "./demo/default-light/partials/_sidebar.html",
+            "./demo/default-light/partials/_footer.html",
           ]),
           {
             starttag: "<!-- inject:sidebar:html -->",
@@ -78,7 +78,7 @@ gulp.task("watch-index-html", function () {
           return "Processing " + file;
         })
       )
-      .pipe(gulp.dest("./demo/vertical-default-light/"));
+      .pipe(gulp.dest("./demo/default-light/"));
   });
 });
 
@@ -147,7 +147,7 @@ gulp.task("injectCommonAssets", function () {
 gulp.task("injectLayoutStyles", function () {
   var verticalLightStream = gulp
     .src([
-      "./**/vertical-default-light/**/*.html",
+      "./**/default-light/**/*.html",
       "./**/vertical-boxed/**/*.html",
       "./**/vertical-compact/**/*.html",
       "./**/vertical-dark-sidebar/**/*.html",

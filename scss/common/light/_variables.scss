@@ -40,20 +40,20 @@ $colors: (
 $theme-colors: (
   primary: #248afd,
   secondary: #a3a4a5,
-  success: #71c016,
-  info: #68afff,
-  warning: #f5a623,
-  danger: #ff4747,
+  success: #4ad59a,
+  info: #5aacff,
+  warning: #ffc94d,
+  danger: #f05f78,
   light: #f8f9fa,
   dark: #282f3a,
 );
 
 $primary: #248afd;
 $secondary: #a3a4a5;
-$success: #71c016;
-$info: #68afff;
-$warning: #f5a623;
-$danger: #ff4747;
+$success: #4ad59a;
+$info: #5aacff;
+$warning: #ffc94d;
+$danger: #f05f78;
 $light: #f8f9fa;
 $dark: #282f3a;
 $gray-lightest: #e6e9ed;
@@ -76,7 +76,7 @@ $theme-gradient-colors: (
   secondary: linear-gradient(to right, #e7ebf0, #868e96),
   success: linear-gradient(45deg, #7bffce, #30c93e),
   info: linear-gradient(to bottom, #0e4cfd, #6a8eff),
-  warning: linear-gradient(135deg, #ffc480, #ff763b),
+  warning: linear-gradient(135deg, #ffc94d, #ff763b),
   danger: linear-gradient(316deg, #fc5286, #fbaaa2),
   light: linear-gradient(to right, #cfd9df 0%, #e2ebf0 100%),
   dark: linear-gradient(to right, #7d7979 0%, #000000 100%),
@@ -145,10 +145,10 @@ $btn-font-size-xs: 0.625rem;
 $btn-font-size-sm: 0.875rem;
 $btn-font-size-lg: 0.875rem;
 
-$btn-border-radius: 0.1875rem;
-$btn-border-radius-xs: 0.1875rem;
-$btn-border-radius-sm: 0.1875rem;
-$btn-border-radius-lg: 0.1875rem;
+$btn-border-radius: 0;
+$btn-border-radius-xs: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
 
 ///////// BUTTONS ////////
 
@@ -218,7 +218,7 @@ $card-padding-x: 1.437rem;
 $card-border-radius: 0;
 $card-border-color: #e3e3e3;
 $card-box-shadow: none;
-$card-title-color: #787878;
+$card-title-color: #000000;
 $card-description-color: #76838f;
 $grid-gutter-width: 30px;
 $action-transition-duration: 0.25s;

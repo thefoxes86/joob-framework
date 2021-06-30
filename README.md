@@ -1,14 +1,13 @@
 # joob-framework
 
-Run npm install 
+Install gulp if you don't have in your environment
 
-If you don't have is necessary to install gulp
-
+`npm install -g gulp-cli`
 
 Then
 
-npm install -g gulp-cli
+`npm install`
 
-end finallyy
+and finally
 
-gulp serve
+`gulp serve`

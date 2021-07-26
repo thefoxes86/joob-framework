@@ -80,6 +80,31 @@ gulp.task("watch-index-html", function () {
       )
       .pipe(gulp.dest("./demo/default-light/"));
   });
+  gulp.watch("", function (file) {
+    return gulp
+      .src("./demo/default-dark/index.html")
+      .pipe(
+        inject(
+          gulp.src([
+            "./demo/default-dark/partials/_navbar.html",
+            "./demo/default-dark/partials/_sidebar.html",
+            "./demo/default-dark/partials/_footer.html",
+          ]),
+          {
+            starttag: "<!-- inject:sidebar:html -->",
+            transform: function (filepath, file) {
+              return file.contents.toString();
+            },
+          }
+        )
+      )
+      .pipe(
+        print(function (file) {
+          return "Processing " + file;
+        })
+      )
+      .pipe(gulp.dest("./demo/default-dark/"));
+  });
 });
 
 // Static Server without watching scss files

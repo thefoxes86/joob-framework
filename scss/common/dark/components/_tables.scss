@@ -2,6 +2,7 @@
 
 .table {
   margin-bottom: 0;
+  color: white;
   thead {
     th {
       border-top: 0;
@@ -42,4 +43,8 @@
   &.table-bordered {
     border-top: 1px solid $border-color;
   }
+}
+
+.table-hover > tbody > tr:hover {
+  color: $text-muted;
 }

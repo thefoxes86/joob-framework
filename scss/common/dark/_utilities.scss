@@ -43,7 +43,7 @@
   @include display-flex;
   @include align-items(stretch);
   @include justify-content(stretch);
-  >.card{
+  > .card {
     width: 100%;
     min-width: 100%;
   }
@@ -101,4 +101,18 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.text-muted,
+.preview-list .preview-item .preview-item-content p .content-category,
+.email-wrapper
+  .mail-sidebar
+  .menu-bar
+  .profile-list-item
+  a
+  .user
+  .u-designation,
+.email-wrapper .mail-list-container .mail-list .content .message_text,
+.email-wrapper .mail-list-container .mail-list .details .date {
+  color: white !important;
 }

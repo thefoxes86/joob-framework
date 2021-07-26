@@ -8,10 +8,18 @@
   padding: 0;
   width: $sidebar-width-lg;
   z-index: 11;
-  transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
+  -webkit-transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
+  -moz-transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
+  -ms-transition: width $action-transition-duration
+      $action-transition-timing-function,
+    background $action-transition-duration $action-transition-timing-function;
 
   .nav {
     overflow: hidden;
@@ -31,7 +39,8 @@
         @include display-flex;
         @include align-items(center);
         white-space: nowrap;
-        padding: $sidebar-menu-padding-top $sidebar-menu-padding-right $sidebar-menu-padding-bottom $sidebar-menu-padding-left;
+        padding: $sidebar-menu-padding-top $sidebar-menu-padding-right
+          $sidebar-menu-padding-bottom $sidebar-menu-padding-left;
         color: $sidebar-menu-color;
         @include transition-duration(0.45s);
         transition-property: color;
@@ -70,9 +79,9 @@
               font-family: "themify";
               font-style: normal;
               display: block;
-              font-size: .687rem;
+              font-size: 0.687rem;
               line-height: 10px;
-              @include transition(all .2s ease-in);
+              @include transition(all 0.2s ease-in);
             }
           }
         }
@@ -83,6 +92,7 @@
           font-size: $sidebar-menu-font-size;
           line-height: 1;
           vertical-align: middle;
+          padding-left: 15px;
         }
 
         .badge {
@@ -105,28 +115,28 @@
 
       &.active {
         > .nav-link {
-            background: $sidebar-menu-active-bg;
-            position: relative;
-            i,
-            .menu-title,
-            .menu-arrow {
-              color: $sidebar-menu-active-color;
-            }
+          background: $sidebar-menu-active-bg;
+          position: relative;
+          i,
+          .menu-title,
+          .menu-arrow {
+            color: $sidebar-menu-active-color;
+          }
         }
       }
     }
 
     &:not(.sub-menu) {
       margin-top: 1.45rem;
-      margin-left: .375rem;
-      margin-right: .375rem;
+      margin-left: 0.375rem;
+      margin-right: 0.375rem;
       > .nav-item {
-        margin-top: .2rem;
+        margin-top: 0.2rem;
         &.active {
           background: $sidebar-menu-active-bg;
-          border-radius: 0.437rem;            
+          border-radius: 0.437rem;
           .nav-link {
-            border-radius: 0.437rem;            
+            border-radius: 0.437rem;
           }
         }
         > .nav-link {
@@ -139,17 +149,17 @@
         &:hover {
           > .nav-link {
             background: $sidebar-menu-hover-bg;
-            color: $sidebar-menu-hover-color; 
+            color: $sidebar-menu-hover-color;
             &:not([aria-expanded="true"]) {
-              border-radius: .437rem;
-            }                             
+              border-radius: 0.437rem;
+            }
           }
         }
       }
     }
     &.sub-menu {
       margin-bottom: 0;
-      margin-top:0;
+      margin-top: 0;
       list-style: none;
       padding: $sidebar-submenu-padding;
       background: $sidebar-menu-hover-bg;
@@ -157,7 +167,7 @@
       .nav-item {
         padding: 0;
         &::before {
-          content: '';
+          content: "";
           width: 5px;
           height: 5px;
           position: absolute;

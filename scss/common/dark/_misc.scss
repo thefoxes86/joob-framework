@@ -3,6 +3,11 @@ body,
 html {
   overflow-x: hidden;
   padding-right: 0 !important; // resets padding right added by Bootstrap modal
+  background-image: url(../../images/background-hyperstrator-dark.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #0a0a0a;
+  color: white;
 }
 
 *:-moz-full-screen,

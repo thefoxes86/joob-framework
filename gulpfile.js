@@ -12,6 +12,8 @@ var sourcemaps = require("gulp-sourcemaps");
 var concat = require("gulp-concat");
 var merge = require("merge-stream");
 var htmlImport = require("gulp-html-import");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
 
 gulp.paths = {
   dist: "dist",
@@ -884,3 +886,71 @@ gulp.task(
 );
 
 gulp.task("default", gulp.series("serve"));
+
+// Build a dist version of css
+gulp.task("buildCss", function () {
+  return gulp
+    .src("./scss/**/*.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("dist/css"));
+});
+
+// Build a dist version of js
+gulp.task("buildJs", function () {
+  return gulp.src("./js/*").pipe(concat("all.js")).pipe(gulp.dest("dist/js"));
+});
+
+// Build a dist version of html of Dark
+gulp.task("buildHtmlDark", function () {
+  return gulp
+    .src("./demo/default-dark/*")
+    .pipe(replace("demo/", ""))
+    .pipe(replace("../../../", "../"))
+    .pipe(replace("../../", "../"))
+    .pipe(gulp.dest("dist/default-dark"));
+});
+
+// Build a dist version of html of Light
+gulp.task("buildHtmlLight", function () {
+  return gulp
+    .src("./demo/default-light/*")
+    .pipe(replace("demo/", ""))
+    .pipe(replace("../../../", "../"))
+    .pipe(replace("../../", "../"))
+    .pipe(gulp.dest("dist/default-light"));
+});
+
+// Build a dist version of html of Light
+gulp.task("buildHtmlIndex", function () {
+  return gulp
+    .src("./index.html")
+    .pipe(replace("demo/", ""))
+    .pipe(gulp.dest("dist"));
+});
+
+// Move Image Directory into dist
+gulp.task("buildMoveImages", function () {
+  return gulp.src("./images/*").pipe(gulp.dest("dist/images"));
+});
+
+// Move vendors Directory into dist
+gulp.task("buildMoveVendors", function () {
+  return gulp.src("./vendors/*").pipe(gulp.dest("dist/vendors"));
+});
+
+// Build a dist version complete
+gulp.task(
+  "build",
+  gulp.series(
+    "buildCss",
+    "buildJs",
+    "buildHtmlDark",
+    "buildHtmlLight",
+    "buildHtmlIndex",
+    "buildMoveImages",
+    "buildMoveVendors"
+  )
+);

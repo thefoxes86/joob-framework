@@ -53,6 +53,7 @@
     "owl-carousel-2": "0.0.3",
     "perfect-scrollbar": "^1.4.0",
     "popper.js": "^1.15.0",
+    "postcss": "^8.3.6",
     "progressbar.js": "1.0.1",
     "pwstabs": "1.4.0",
     "quill": "^1.3.6",

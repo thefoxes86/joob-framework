@@ -201,13 +201,16 @@
 
 /* style for off-canvas menu*/
 @media screen and (max-width: 991px) {
+  .sidebar {
+    width: 100%;
+  }
   .sidebar-offcanvas {
     position: fixed;
     max-height: calc(100vh - #{$navbar-height});
     top: $navbar-height;
     bottom: 0;
     overflow: auto;
-    right: -$sidebar-width-lg;
+    right: -100%;
     -webkit-transition: all 0.25s ease-out;
     -o-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;

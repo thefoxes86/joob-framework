@@ -1,9 +1,37 @@
 /* Navbar */
+.sidebar-icon-only {
+  .logo-item {
+    margin-left: -50px !important;
 
+    img {
+      width: 250px;
+    }
+  }
+}
 .navbar-toggler {
   color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:focus {
+    text-decoration: none;
+    outline: 0 !important;
+    border: 0 !important;
+    box-shadow: 0 0 0 0 !important;
+  }
 }
+
+.sidebar-icon-only .navbar-toggler {
+  transform: rotate(90deg);
+}
+
 .navbar {
+  background: $navbar-bg;
   font-weight: 400;
   transition: background $action-transition-duration
     $action-transition-timing-function;
@@ -13,10 +41,10 @@
     $action-transition-timing-function;
   -ms-transition: background $action-transition-duration
     $action-transition-timing-function;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 0;
 
   .navbar-brand-wrapper {
-    background: $sidebar-bg;
+    background: $navbar-bg;
     transition: width $action-transition-duration
         $action-transition-timing-function,
       background $action-transition-duration $action-transition-timing-function;
@@ -29,7 +57,7 @@
     -ms-transition: width $action-transition-duration
         $action-transition-timing-function,
       background $action-transition-duration $action-transition-timing-function;
-    width: $sidebar-width-lg;
+    width: $sidebar-logo-width-lg;
     height: $navbar-height;
     .navbar-brand {
       color: lighten($gray-dark, 20%);
@@ -68,7 +96,7 @@
   }
 
   .navbar-menu-wrapper {
-    background: $navbar-default-bg;
+    background: $navbar-bg;
     transition: width $action-transition-duration
       $action-transition-timing-function;
     -webkit-transition: width $action-transition-duration
@@ -108,10 +136,24 @@
           transform: rotate(90deg);
         }
       }
-      &.navbar-toggler-right {
-        @media (max-width: 991px) {
-          padding-left: 15px;
-          padding-right: 11px;
+      @media (max-width: 991px) {
+        &.navbar-toggler {
+          width: 40px;
+          height: 40px;
+          margin-left: 20px;
+          padding: 10px;
+          border-radius: 100px;
+          background: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:focus {
+            text-decoration: none;
+            outline: 0 !important;
+            border: 0 !important;
+            box-shadow: 0 0 0 0 !important;
+          }
         }
       }
     }
@@ -120,8 +162,14 @@
       @extend .d-flex;
       @extend .flex-row;
       @extend .align-items-center;
+      .logo-item {
+        margin-left: -200px;
+
+        img {
+          width: 250px;
+        }
+      }
       .nav-item {
-        margin-left: 1rem;
         margin-right: 1rem;
         &:last-child {
           margin-right: 0;
@@ -258,6 +306,14 @@
             position: relative;
             padding: 0;
             text-align: center;
+            width: 40px;
+            height: 40px;
+            background: black;
+            padding: 10px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             i {
               font-size: 1.25rem;
               margin-right: 0;

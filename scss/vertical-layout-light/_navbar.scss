@@ -1,5 +1,35 @@
 /* Navbar */
+.sidebar-icon-only {
+  .logo-item {
+    margin-left: -50px !important;
 
+    img {
+      width: 250px;
+    }
+  }
+}
+
+.navbar-toggler {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:focus {
+    text-decoration: none;
+    outline: 0 !important;
+    border: 0 !important;
+    box-shadow: 0 0 0 0 !important;
+  }
+}
+
+.sidebar-icon-only .navbar-toggler,
+.sidebar-icon-only .navbar-toggler-right {
+  transform: rotate(90deg);
+}
 .navbar {
   font-weight: 400;
   transition: background $action-transition-duration
@@ -13,6 +43,7 @@
   -webkit-box-shadow: 0 5px 21px -5px #cdd1e1;
   -moz-box-shadow: 0 5px 21px -5px #cdd1e1;
   box-shadow: 0 5px 21px -5px #cdd1e1;
+  background: $navbar-bg-color;
   .sidebar-dark & {
     box-shadow: none;
   }
@@ -34,7 +65,7 @@
     -ms-transition: width $action-transition-duration
         $action-transition-timing-function,
       background $action-transition-duration $action-transition-timing-function;
-    width: $sidebar-width-lg;
+    width: $sidebar-logo-width-lg;
     height: $navbar-height;
     .navbar-brand {
       color: lighten($gray-dark, 20%);
@@ -112,10 +143,25 @@
           transform: rotate(90deg);
         }
       }
-      &.navbar-toggler-right {
-        @media (max-width: 991px) {
-          padding-left: 15px;
-          padding-right: 0;
+
+      @media (max-width: 991px) {
+        &.navbar-toggler {
+          width: 40px;
+          height: 40px;
+          margin-left: 20px;
+          padding: 10px;
+          border-radius: 100px;
+          background: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:focus {
+            text-decoration: none;
+            outline: 0 !important;
+            border: 0 !important;
+            box-shadow: 0 0 0 0 !important;
+          }
         }
       }
     }
@@ -124,8 +170,14 @@
       @extend .d-flex;
       @extend .flex-row;
       @extend .align-items-center;
+      .logo-item {
+        margin-left: -200px;
+
+        img {
+          width: 250px;
+        }
+      }
       .nav-item {
-        margin-left: 1rem;
         margin-right: 1rem;
         &:last-child {
           margin-right: 0;

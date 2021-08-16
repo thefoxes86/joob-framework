@@ -7,7 +7,7 @@
       border-top: 0;
       border-bottom-width: 1px;
       font-weight: bold;
-      font-size: .875rem;
+      font-size: 0.875rem;
       i {
         margin-left: 0.325rem;
       }
@@ -19,7 +19,7 @@
     line-height: 1;
     white-space: nowrap;
     padding: $table-cell-padding;
-  } 
+  }
   td {
     font-size: $default-font-size;
     img {
@@ -41,5 +41,12 @@
   }
   &.table-bordered {
     border-top: 1px solid $border-color;
+  }
+}
+
+.select__all {
+  padding: 0 5px;
+  input {
+    margin-top: 0;
   }
 }

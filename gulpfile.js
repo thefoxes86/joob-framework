@@ -129,7 +129,7 @@ gulp.task("sass:watch", function () {
 /* inject partials like sidebar and navbar */
 gulp.task("injectPartial", function () {
   return gulp
-    .src("./**/*.html", { base: "./" })
+    .src(["./**/*.html", "!./dist"], { base: "./" })
     .pipe(injectPartials())
     .pipe(gulp.dest("./"));
 });
@@ -900,7 +900,7 @@ gulp.task("buildCss", function () {
 
 // Build a dist version of js
 gulp.task("buildJs", function () {
-  return gulp.src("./js/*").pipe(concat("all.js")).pipe(gulp.dest("dist/js"));
+  return gulp.src("./js/*").pipe(gulp.dest("dist/js"));
 });
 
 // Build a dist version of html of Dark
@@ -935,6 +935,10 @@ gulp.task("buildHtmlIndex", function () {
 gulp.task("buildMoveImages", function () {
   return gulp.src("./images/*").pipe(gulp.dest("dist/images"));
 });
+// Move Image Directory into dist
+gulp.task("buildMoveFonts", function () {
+  return gulp.src("./fonts/*").pipe(gulp.dest("dist/fonts"));
+});
 
 // Move vendors Directory into dist
 gulp.task("buildMoveVendors", function () {
@@ -947,10 +951,9 @@ gulp.task(
   gulp.series(
     "buildCss",
     "buildJs",
+    "buildMoveFonts",
     "buildHtmlDark",
     "buildHtmlLight",
-    "buildHtmlIndex",
-    "buildMoveImages",
-    "buildMoveVendors"
+    "buildHtmlIndex"
   )
 );

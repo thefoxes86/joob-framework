@@ -127,6 +127,7 @@
     }
 
     &:not(.sub-menu) {
+      position: fixed;
       margin-top: 1.45rem;
       margin-left: 0.375rem;
       margin-right: 0.375rem;
@@ -203,6 +204,9 @@
 @media screen and (max-width: 991px) {
   .sidebar {
     width: 100%;
+    .nav:not(.sub-menu) {
+      position: relative;
+    }
   }
   .sidebar-offcanvas {
     position: fixed;

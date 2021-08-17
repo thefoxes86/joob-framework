@@ -50,3 +50,15 @@
     margin-top: 0;
   }
 }
+
+.table-scrollable {
+  height: 80vh;
+  overflow: scroll;
+}
+
+@media (max-width: 992px) {
+  .table-scrollable {
+    height: auto;
+    overflow: auto;
+  }
+}

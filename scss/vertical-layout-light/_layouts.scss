@@ -1,5 +1,17 @@
 /* Layouts */
 
+// Fixed Page
+.fixed-page {
+  overflow: hidden;
+  height: 100vh;
+}
+@media (max-width: 992px) {
+  .fixed-page {
+    overflow: auto;
+    height: auto;
+  }
+}
+
 // Sidebar Mini
 .sidebar-mini {
   @media (min-width: 992px) {

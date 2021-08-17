@@ -24635,6 +24635,18 @@ dl li {
   margin-top: 0;
 }
 
+.table-scrollable {
+  height: 80vh;
+  overflow: scroll;
+}
+
+@media (max-width: 992px) {
+  .table-scrollable {
+    height: auto;
+    overflow: auto;
+  }
+}
+
 .nav-tabs .nav-link {
   background: #292f42;
   color: #fff;
@@ -28519,6 +28531,7 @@ div.tagsinput span.tag a {
 }
 
 .sidebar .nav:not(.sub-menu) {
+  position: fixed;
   margin-top: 1.45rem;
   margin-left: 0.375rem;
   margin-right: 0.375rem;
@@ -28604,6 +28617,9 @@ div.tagsinput span.tag a {
 @media screen and (max-width: 991px) {
   .sidebar {
     width: 100%;
+  }
+  .sidebar .nav:not(.sub-menu) {
+    position: relative;
   }
   .sidebar-offcanvas {
     position: fixed;
@@ -29221,6 +29237,18 @@ div.tagsinput span.tag a {
 }
 
 /* Layouts */
+.fixed-page {
+  overflow: hidden;
+  height: 100vh;
+}
+
+@media (max-width: 992px) {
+  .fixed-page {
+    overflow: auto;
+    height: auto;
+  }
+}
+
 @media (min-width: 992px) {
   .sidebar-mini .navbar .navbar-brand-wrapper {
     width: 185px;
@@ -29259,7 +29287,7 @@ div.tagsinput span.tag a {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
   }
   .sidebar-mini .sidebar .nav .nav-item .nav-link i.menu-arrow {
     display: inline-block;
@@ -29281,7 +29309,7 @@ div.tagsinput span.tag a {
     border-top: none;
   }
   .sidebar-mini:not(.sidebar-icon-only) .sidebar .nav.sub-menu .nav-item .nav-link {
-    padding: .75rem 0 .75rem 1.5rem;
+    padding: 0.75rem 0 0.75rem 1.5rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -29316,13 +29344,14 @@ div.tagsinput span.tag a {
   }
   .sidebar-icon-only .sidebar .nav .nav-item .nav-link {
     display: block;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     text-align: center;
     position: static;
   }
   .sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-title,
-  .sidebar-icon-only .sidebar .nav .nav-item .nav-link .badge, .sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-sub-title {
+  .sidebar-icon-only .sidebar .nav .nav-item .nav-link .badge,
+  .sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-sub-title {
     display: none;
   }
   .sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-title {

@@ -2,7 +2,7 @@
 
 var gulp = require("gulp");
 var browserSync = require("browser-sync").create();
-var sass = require("gulp-sass");
+var sass = require("gulp-sass")(require("node-sass"));
 var rename = require("gulp-rename");
 var del = require("del");
 var replace = require("gulp-replace");
@@ -14,6 +14,8 @@ var merge = require("merge-stream");
 var htmlImport = require("gulp-html-import");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+
+// sass.compiler = require("node-sass");
 
 gulp.paths = {
   dist: "dist",

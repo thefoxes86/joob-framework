@@ -138,38 +138,40 @@ gulp.task("injectPartial", function () {
 
 /* inject Js and CCS assets into HTML */
 gulp.task("injectCommonAssets", function () {
-  return gulp
-    .src("./**/*.html")
-    .pipe(
-      inject(
-        gulp.src(
-          [
-            "./vendors/ti-icons/css/themify-icons.css",
-            "./vendors/css/vendor.bundle.base.css",
-            "./vendors/js/vendor.bundle.base.js",
-          ],
-          { read: false }
-        ),
-        { name: "plugins", relative: true }
+  return (
+    gulp
+      .src("./**/*.html")
+      .pipe(
+        inject(
+          gulp.src(
+            [
+              "./vendors/ti-icons/css/themify-icons.css",
+              "./vendors/css/vendor.bundle.base.css",
+              "./vendors/js/vendor.bundle.base.js",
+            ],
+            { read: false }
+          ),
+          { name: "plugins", relative: true }
+        )
       )
-    )
-    .pipe(
-      inject(
-        gulp.src(
-          [
-            "./css/*.css",
-            "./js/off-canvas.js",
-            "./js/hoverable-collapse.js",
-            "./js/template.js",
-            "./js/settings.js",
-            "./js/todolist.js",
-          ],
-          { read: false }
-        ),
-        { relative: true }
-      )
-    )
-    .pipe(gulp.dest("."));
+      // .pipe(
+      //   inject(
+      //     gulp.src(
+      //       [
+      //         "./css/*.css",
+      //         "./js/off-canvas.js",
+      //         "./js/hoverable-collapse.js",
+      //         "./js/template.js",
+      //         "./js/settings.js",
+      //         "./js/todolist.js",
+      //       ],
+      //       { read: false }
+      //     ),
+      //     { relative: true }
+      //   )
+      // )
+      .pipe(gulp.dest("."))
+  );
 });
 
 /* inject Js and CCS assets into HTML */
@@ -910,6 +912,7 @@ gulp.task("buildHtmlDark", function () {
   return gulp
     .src("./demo/default-dark/*")
     .pipe(replace("demo/", ""))
+    .pipe(replace("../../../../", "../"))
     .pipe(replace("../../../", "../"))
     .pipe(replace("../../", "../"))
     .pipe(gulp.dest("dist/default-dark"));
@@ -920,6 +923,7 @@ gulp.task("buildHtmlLight", function () {
   return gulp
     .src("./demo/default-light/*")
     .pipe(replace("demo/", ""))
+    .pipe(replace("../../../../", "../"))
     .pipe(replace("../../../", "../"))
     .pipe(replace("../../", "../"))
     .pipe(gulp.dest("dist/default-light"));
@@ -933,18 +937,46 @@ gulp.task("buildHtmlIndex", function () {
     .pipe(gulp.dest("dist"));
 });
 
+gulp.task("replacePathVendorsLight", function () {
+  var replacePath1 = gulp
+    .src(["./demo/default-light/*.html"], { base: "./" })
+    .pipe(replace('href="../../vendors', 'href="../vendors'))
+    .pipe(replace('src="../../vendors"', 'src="../vendors"'))
+    .pipe(gulp.dest("./dist"));
+  return replacePath1;
+});
+
+gulp.task("replacePathVendorsDark", function () {
+  var replacePath1 = gulp
+    .src(["./demo/default-dark/*.html"], { base: "./" })
+    .pipe(replace('href="../../vendors', 'href="../vendors'))
+    .pipe(replace('src="../../vendors"', 'src="../vendors"'))
+    .pipe(gulp.dest("./dist"));
+  return replacePath1;
+});
+
 // Move Image Directory into dist
 gulp.task("buildMoveImages", function () {
   return gulp.src("./images/*").pipe(gulp.dest("dist/images"));
 });
 // Move Image Directory into dist
 gulp.task("buildMoveFonts", function () {
-  return gulp.src("./fonts/*").pipe(gulp.dest("dist/fonts"));
+  return gulp.src("./fonts/*/*").pipe(gulp.dest("dist/fonts"));
 });
 
 // Move vendors Directory into dist
 gulp.task("buildMoveVendors", function () {
-  return gulp.src("./vendors/*").pipe(gulp.dest("dist/vendors"));
+  return gulp.src("./vendors/**").pipe(gulp.dest("dist/vendors"));
+});
+
+// Move images Directory into dist
+gulp.task("buildMoveImages", function () {
+  return gulp.src("./images/*").pipe(gulp.dest("dist/images"));
+});
+
+// Move Js Directory into dist
+gulp.task("buildMoveJs", function () {
+  return gulp.src("./js/*").pipe(gulp.dest("dist/js"));
 });
 
 // Build a dist version complete
@@ -953,8 +985,13 @@ gulp.task(
   gulp.series(
     "buildCss",
     "buildJs",
-    "buildMoveFonts",
     "buildHtmlDark",
+    "replacePathVendorsLight",
+    "replacePathVendorsDark",
+    "buildMoveVendors",
+    "buildMoveImages",
+    "buildMoveJs",
+    "buildMoveFonts",
     "buildHtmlLight",
     "buildHtmlIndex"
   )
